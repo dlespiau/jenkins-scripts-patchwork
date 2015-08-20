@@ -1,4 +1,4 @@
-#!/usr/bin/bash -e
+#!/bin/bash -e
 
 originaldir=$PWD
 script=$(readlink -f "$0")
