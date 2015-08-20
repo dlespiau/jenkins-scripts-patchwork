@@ -23,6 +23,8 @@ update_tree()
 		cd "$directory"
 		git fetch
 		git reset --hard origin/master
+		cd -
+		return 0
 	}
 
 	git clone $git_url "$directory"
