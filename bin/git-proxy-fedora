@@ -1,0 +1,15 @@
+#!/bin/bash
+
+function check_env() {
+	var_name=$1
+	eval var=\$$var_name
+	[ -z "$var" ] && {
+		echo "Environment variable $var_name not set!"
+		exit 1
+	}
+}
+
+check_env SOCKS_PROXY_SERVER
+check_env SOCKS_PROXY_PORT
+
+nc --proxy-type socks5 --proxy $SOCKS_PROXY_SERVER:$SOCKS_PROXY_PORT $*
