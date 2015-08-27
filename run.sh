@@ -31,5 +31,5 @@ update_virtualenv()
 }
 
 update_virtualenv env requirements.txt
-tox
+tox --recreate
 deactivate
