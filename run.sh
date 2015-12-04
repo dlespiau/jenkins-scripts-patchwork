@@ -33,4 +33,5 @@ update_virtualenv()
 update_virtualenv env requirements.txt
 tox --recreate
 ./tests/test_js.sh
+./tests/test_pep8.sh
 deactivate
